@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import PuzzleGame from './components/PuzzleGame.vue'
+import MainScreen from './views/MainScreen.vue'
+import PuzzleGame from './views/components/PuzzleGame.vue'
 import { useGameStore } from '@/stores/puzzle'
-import Button from './components/Button.vue'
+import Button from './views/components/Button.vue'
 
 const { getVictoryStatus, setWin, getGrid, handleClick, reset } = useGameStore()
 </script>
@@ -12,8 +12,8 @@ const { getVictoryStatus, setWin, getGrid, handleClick, reset } = useGameStore()
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld v-if="getVictoryStatus()" msg="Congrats! 🥳" />
-      <HelloWorld v-else @click="setWin()" msg="Slide Puzzle" />
+      <MainScreen v-if="getVictoryStatus()" msg="Congrats! 🥳" />
+      <MainScreen v-else @click="setWin()" msg="Slide Puzzle" />
     </div>
   </header>
 

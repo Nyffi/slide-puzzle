@@ -41,11 +41,6 @@ export class GameController {
     const aux = this.grid[0]
     this.grid.splice(0, 1)
     this.grid.push(aux)
-
-    // ;[this.grid[0], this.grid[this.grid.length - 1]] = [
-    //   this.grid[this.grid.length - 1],
-    //   this.grid[0],
-    // ]
   }
 
   resetGame() {

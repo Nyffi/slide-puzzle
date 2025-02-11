@@ -32,7 +32,8 @@ defineProps<{
 .image-slice {
   background-size: 1024px 1024px; /* Set the background image to the full size */
   background-repeat: no-repeat;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
+  border-radius: 20px;
 }
 
 .slice-id {
